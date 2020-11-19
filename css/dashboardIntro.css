@@ -14,8 +14,9 @@
     height: 90%;
 }
 
-.boton{
+.main_container .boton{
     align-self: flex-end;
+    display: inline-block;
 }
 
 .boton > .btn{
