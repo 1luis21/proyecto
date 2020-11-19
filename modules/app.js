@@ -27,5 +27,6 @@ document.getElementById("btnAgregar").addEventListener("click", ()=>{
     localStorage.setItem("miBD", JSON.stringify(bd));
     console.log("Guardado" + usuariox);
 
-    alert("Usuario guardado");
+    alert("Usuario " + nombre + " " + apellidoPaterno + " " + apellidoMaterno + " guardado");
+
 });

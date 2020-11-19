@@ -15,7 +15,7 @@ const visualizar = () => {
     for(let i = 0; i<arreglo.length; i++){
 
         let option = document.createElement('option');
-        option.innerHTML = arreglo[i].telefono;
+        option.innerHTML = arreglo[i].nombre;
 
         recibirSelect.appendChild(option);
 
