@@ -1,0 +1,170 @@
+/* dashboard usuarios */
+
+.usuarios{
+    color: rgb(0, 229, 232);
+}
+
+.main_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    width: 90%;
+    height: 90%;
+}
+
+.boton{
+    align-self: flex-end;
+}
+
+.boton > .btn{
+    padding: 1em 1.5em;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    border:2px solid #3A7D44;
+    background-color: #fff;
+    color: #000;
+    font-weight: 500;
+    font-size: 1em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boton > .btn:hover{
+    background: #3A7D44;
+    color: #fff;
+}
+
+.boton > .btn:active{
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0,0.5) inset;
+}
+
+.boton > .btn > i{
+    font-size: 1.5em;
+    /* text-align: center; */
+    margin-right: 0.5em;
+}
+
+
+.cards_container{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    overflow-y: auto;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 45%;
+    width: 30%;
+
+    background-color: #fff;
+    /* background-color: rgba(27, 82, 153,0.5); */
+    /* border: 1px solid black; */
+    box-shadow: 5px 5px 10px -6px black;
+    border-radius: 10px;
+}
+
+.card_data{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 80%;
+}
+
+.card_data-icon > span > i{
+    font-size: 5em;
+    color: black;
+}
+
+.card_data-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 40%;
+    color: #49516F;
+}
+
+.card_data-text > h3{
+    align-self: center;
+    font-weight: 900;
+    font-size: 1.4em;
+    color: #000;
+}
+
+.card_data-text > p{
+    font-weight: 700;
+}
+
+.card_data-text > p > .desagree{
+    color: #A93F55;
+}
+
+.card_data-text > p > .agree{
+    color: #3A7D44;
+}
+
+.card_buttons{
+    display: flex;
+    width: 90%;
+    height: 20%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.card_buttons > .btn{
+    padding: 0.5em;
+    border: none;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    width: 40%;
+    font-weight: 500;
+}
+
+.card_buttons > .btn-eliminar{
+    background-color: #fff;
+    color: #000;
+    border: 2px solid  #A93F55;
+}
+
+.card_buttons > .btn-eliminar:hover{
+    background-color: #A93F55;
+    color: #fff;
+}
+
+.card_buttons > .btn-eliminar:active{
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0,0.3) inset;
+}
+
+.card_buttons > .btn-modificar{
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #3A7D44;
+}
+
+.card_buttons > .btn-modificar:hover{
+    background-color: #3A7D44;
+    color: #fff;
+}
+
+.card_buttons > .btn-modificar:active{
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0,0.3) inset;
+}
+
+a {
+    font: bold;
+    color: white;
+}

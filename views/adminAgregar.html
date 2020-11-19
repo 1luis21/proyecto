@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;700;900&display=swap" rel="stylesheet">
+    <!-- Estilos de la pagina -->
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/dashboardGeneral.css">
+    <link rel="stylesheet" href="../css/dashboardAgregar.css">
+    <script src="../objects/usuarios.js"></script>
+</head>
+<body>
+    <div class="container">
+
+        <aside class="dashboard_lateral">
+
+            <section class="lateral_header">
+
+                <article class="lateral_items">
+                    <div class="items user">
+                        <span class="icono"><i class="far fa-user"></i></span>
+    
+                        <div class="titulo">
+                            <h1>
+                                Alfredo Paz 
+                            </h1>
+
+                            <span>Administrador</span>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="lateral_items">
+                    <button href="#" class="items">
+                        <span class="icono"><i class="fas fa-money-check-alt"></i></span>
+                        <a href="adminAbonos.html">Abonos</a>
+                    </button>
+                </article>
+    
+                <article class="lateral_items">
+                    <button href="#" class="items">
+                        <span class="icono"><i class="fas fa-wallet"></i></span>
+                        <a href="adminDeudas.html">Deudas</a>
+                    </button>
+                </article>
+    
+                <article class="lateral_items">
+                    <button href="#" class="items usuarios">
+                        <span class="icono"><i class="fas fa-user-plus"></i></span>
+                        <a href="adminUsuarios.html">Usuarios</a>
+                    </button>
+                </article>
+            </section>
+            
+            <section class="lateral_footer">
+
+                <article class="lateral_items footer">
+                    <button class="items logOut">
+                        <span class="icono"><i class="fas fa-sign-out-alt"></i></span>
+                        <p>Salir</p>
+                    </button>
+                </article>
+
+                <div class="copyright">
+                    <p>Derechos reservados &copy; 2020 </p>
+                </div>
+
+            </section>
+
+        </aside>
+
+        <section class="dashboard_main"> 
+
+            <article class="main_container">
+
+                <form class="form_container">
+
+                    <div class="form_item">
+
+                        <label for="name">Nombre: </label>
+                        <input type="text" name="name" id="name">
+
+                    </div>
+
+                    <div class="form_item">
+
+                        <label for="apePaterno">Apellido Paterno: </label>
+                        <input type="text" name="apePaterno" id="apePaterno">
+
+                    </div>
+
+                    <div class="form_item">
+
+                        <label for="ApeMaterno">Apellido Materno: </label>
+                        <input type="text" name="apeMaterno" id="apeMaterno">
+
+                    </div>
+
+                    <div class="form_item">
+
+                        <label for="tel">Teléfono: </label>
+                        <input type="number" name="tel" id="tel">
+
+                    </div>
+
+                    <div class="form_item">
+
+                        <label for="mail">Correo: </label>
+                        <input type="email" name="mail" id="mail">
+
+                    </div>
+
+                    <div class="form_item">
+
+                        <label for="pass">Contraseña: </label>
+                        <input type="password" name="pass" id="pass">
+
+                    </div>
+
+                    <div class="form_item">
+
+                        <label for="balance">Balance: </label>
+                        <input type="number" name="balance" id="balance">
+
+                    </div>
+
+                    <div class="form_buttons">
+
+                        <button type="button" class="add btn" id="btnAgregar">Agregar</button>
+                        <button type="button" class="cancel btn"><a href="adminUsuarios.html" class="aAgregar">Cancelar</a></button>
+
+                    </div>
+
+                </form>
+
+            </article>
+
+        </section>
+    </div>
+    <script src="../modules/app.js"></script>
+</body>
+</html>
