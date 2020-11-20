@@ -34,15 +34,14 @@ document.getElementById("btnAgregarAbono").addEventListener("click", ()=>{
 
         return alert("Ingresa todos los datos / El valor debe ser mayor a 0");
 
-    }
 
     let date = new Date();
     let dia = date.getDate();
     let mes = date.getMonth() + 1;
     let year = date.getFullYear();
 
-    let fecha = `${dia}/${mes}/${year}`;
 
+    let fecha = `${dia}/${mes}/${year}`;
     usuarios.datos.forEach(persona => {
         if(persona.nombre == nombre){
             persona.balance = parseInt(persona.balance) - parseInt(balance);
