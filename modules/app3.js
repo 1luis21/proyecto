@@ -24,11 +24,11 @@ const visualizar = () => {
 
 visualizar();
 
-document.getElementById("btnAgregarDeuda").addEventListener("click",()=>{
+document.getElementById("btnAgregarAbono").addEventListener("click", ()=>{
 
     let usuarios = JSON.parse(localStorage.getItem("miBD"));
     let nombre = document.getElementById("deudores").value;
-    let balance = document.getElementById("txtAgregarDeuda").value;
+    let balance = document.getElementById("txtAbono").value;
     
     if(balance <= 0){
         return alert("Errorrrrr");
@@ -37,7 +37,7 @@ document.getElementById("btnAgregarDeuda").addEventListener("click",()=>{
     usuarios.datos.forEach(persona => {
 
         if(persona.nombre == nombre){
-            persona.balance = parseInt(persona.balance) + parseInt(balance);
+            persona.balance = parseInt(persona.balance) - parseInt(balance);
         }
     });
 
