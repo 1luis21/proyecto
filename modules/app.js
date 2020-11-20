@@ -17,8 +17,18 @@ document.getElementById("btnAgregar").addEventListener("click", ()=>{
     let correo          = document.getElementById("mail").value;
     let pw              = document.getElementById("pass").value;
     let balance         = document.getElementById("balance").value;
+
+    let date = new Date();
+    let dia = date.getDate();
+    let mes = date.getMonth() + 1;
+    let year = date.getFullYear();
+
+    let fecha = `${dia}/${mes}/${year}`;
+    let abono = [fecha,0];
+    let deuda = [fecha,0];
     //instanciamos nuevo usaurio
-    let usuariox = new Usuario(nombre, apellidoPaterno, apellidoMaterno, telefono, correo, pw, balance);
+    let usuariox = new Usuario(nombre, apellidoPaterno, apellidoMaterno, telefono, correo, pw, balance, abono, deuda);
+
 
 
     //almacenamos como objeto en el array "bd";+

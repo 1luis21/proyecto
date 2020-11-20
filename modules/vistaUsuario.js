@@ -9,6 +9,7 @@ window.onload = function(){
     let base = JSON.parse(localStorage.getItem('miBD'));
     let txt_usuario = '';
     base.datos.forEach(usuario => {
+        let dia_abono  = usuario.abono.length;
         txt_usuario += `
         <section class="card">
 
@@ -24,8 +25,8 @@ window.onload = function(){
 
                     <h3 class="name">${usuario.nombre} ${usuario.apellidoPaterno}</h3>
 
-                    <p>Ultimo pago en: <span class="agree">$500</span></p>
-                    <p>Ultimo abono de: <span class="agree">$500</span></p>
+                    <p>Ultimo abono en: <span class="agree">${usuario.abono[dia_abono - 1][0]}</span></p>
+                    <p>Ultimo abono de: <span class="agree">$ ${usuario.abono[dia_abono - 1][1]}</span></p>
                     <P>Deuda total: <span class="desagree" id="deuda">$ ${usuario.balance}</span></P>
 
                 </div>
@@ -36,11 +37,5 @@ window.onload = function(){
         `;
     });
 
-    
-
-    // if(document.getElementById('personas-abonos') == )
-
     document.getElementById('cards_usuario').innerHTML = txt_usuario;
-    console.log(txt);
-    console.log(base);
 };
