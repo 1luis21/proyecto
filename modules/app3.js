@@ -31,7 +31,7 @@ document.getElementById("btnAgregarAbono").addEventListener("click", ()=>{
     let balance = document.getElementById("txtAbono").value;
     
     if(balance <= 0){
-        return alert("Errorrrrr");
+        return alert("Error");
     }
 
     usuarios.datos.forEach(persona => {

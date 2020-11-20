@@ -31,7 +31,7 @@ document.getElementById("btnAgregarDeuda").addEventListener("click",()=>{
     let balance = document.getElementById("txtAgregarDeuda").value;
     
     if(balance <= 0){
-        return alert("Errorrrrr");
+        return alert("Error");
     }
 
     usuarios.datos.forEach(persona => {
@@ -42,6 +42,6 @@ document.getElementById("btnAgregarDeuda").addEventListener("click",()=>{
     });
 
     localStorage.setItem("miBD", JSON.stringify(usuarios));
-    location.replace("adminIntro.html");
+    location.replace("adminDeudas.html");
 
 });
