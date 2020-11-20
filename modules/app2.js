@@ -52,3 +52,25 @@ document.getElementById("btnAgregarDeuda").addEventListener("click",()=>{
     location.replace("adminDeudas.html");
 
 });
+
+
+document.getElementById("btnAgregarAtodos").addEventListener("click", () =>{
+
+    let usuarios = JSON.parse(localStorage.getItem("miBD"));
+    let nombre = document.getElementById("deudores").value;
+    let balance = document.getElementById("txtAgregarDeuda").value;
+
+    if(balance <= 0){
+        return alert("Error");
+    }
+
+    usuarios.datos.forEach(persona => {
+
+        persona.balance = parseInt(persona.balance) + parseInt(balance);
+        
+    });
+
+    localStorage.setItem("miBD", JSON.stringify(usuarios));
+    location.replace("adminDeudas.html");
+
+});
