@@ -29,7 +29,13 @@ document.getElementById("btnAgregarDeuda").addEventListener("click",()=>{
     let usuarios = JSON.parse(localStorage.getItem("miBD"));
     let nombre = document.getElementById("deudores").value;
     let balance = document.getElementById("txtAgregarDeuda").value;
-    
+
+    let date = new Date();
+    let dia = date.getDate();
+    let mes = date.getMonth() + 1;
+    let year = date.getFullYear();
+    let fecha = `${dia}/${mes}/${year}`;
+
     if(balance <= 0){
         return alert("Error");
     }
@@ -38,6 +44,7 @@ document.getElementById("btnAgregarDeuda").addEventListener("click",()=>{
 
         if(persona.nombre == nombre){
             persona.balance = parseInt(persona.balance) + parseInt(balance);
+            persona.deuda.push([fecha,balance]);
         }
     });
 

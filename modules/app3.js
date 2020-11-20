@@ -31,17 +31,26 @@ document.getElementById("btnAgregarAbono").addEventListener("click", ()=>{
     let balance = document.getElementById("txtAbono").value;
     
     if(balance <= 0){
-        return alert("Error");
+
+        return alert("Ingresa todos los datos / El valor debe ser mayor a 0");
+
     }
 
-    usuarios.datos.forEach(persona => {
+    let date = new Date();
+    let dia = date.getDate();
+    let mes = date.getMonth() + 1;
+    let year = date.getFullYear();
 
+    let fecha = `${dia}/${mes}/${year}`;
+
+    usuarios.datos.forEach(persona => {
         if(persona.nombre == nombre){
             persona.balance = parseInt(persona.balance) - parseInt(balance);
+            persona.abono.push([fecha,balance]);
         }
     });
 
     localStorage.setItem("miBD", JSON.stringify(usuarios));
-    location.replace("adminIntro.html");
+    // location.replace("adminIntro.html");
 
 });
