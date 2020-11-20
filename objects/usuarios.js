@@ -1,5 +1,5 @@
 class Usuario{
-    constructor(nombre, apellidoPaterno, apellidoMaterno, telefono, correo, pw, balance){
+    constructor(nombre, apellidoPaterno, apellidoMaterno, telefono, correo, pw, balance, abono){
 
         this.nombre = nombre;
         this.apellidoPaterno = apellidoPaterno;
@@ -8,6 +8,7 @@ class Usuario{
         this.correo = correo;
         this.pw = pw;
         this.balance = balance;
-    
+        this.abono = [];
+        this.deuda = [];
     }
 }
